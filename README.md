@@ -59,18 +59,18 @@ Tokenizer - Tokenizer converts input text into tokens (numbers) that models can 
 
 from transformers import AutoTokenizer
 
-# This will create a ready to use pipeline object and ready to use generic pipeline utility from transformers
+This will create a ready to use pipeline object and ready to use generic pipeline utility from transformers
 
 from transformers import pipeline
 
-Models can be loaded directly with the from_model_id method
+Models can be loaded directly with the **from_model_id** method
 
-# The tokenizer is necessary to encode input text into tokens and decode output tokens back to text.
+The tokenizer is necessary to encode input text into tokens and decode output tokens back to text.
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-As we have to download it locally so we use a lighter model like  GPT2
+As we have to download it locally so we use a lighter model like  **GPT2**
 
-# The below pipeline will handle encoding inputs, running the model, and decoding outputs automatically
+The below pipeline will handle encoding inputs, running the model, and decoding outputs automatically
 pipe = pipeline(
     "text-generation",
     model=model,
