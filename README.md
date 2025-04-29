@@ -4,21 +4,21 @@ I have created a Text Generation Chat bot using the Huggingface pretrained model
 
 For API Calls I Installed the required libraries from HuggingFace
 
- huggingface_hub
- transformers
- accelerate
- bitsandbytes
- Langchain
+ 1. huggingface_hub
+ 2. transformers
+ 3. accelerate
+ 4. bitsandbytes
+ 5. Langchain
 
 
-I have acced the pretrained model using different methods like:
+**I have acced the pretrained model using different methods like:**
 
-Through Hugging Face Endpoints
-By creating a LLMChain
-By creating a LLMpipeLine
+1. Through Hugging Face Endpoints
+2. By creating a LLMChain
+3. By creating a LLMpipeLine
 
 
-HuggingFaceEndpoint
+## HuggingFaceEndpoint
 
 Used Hugging face Endpoints to access the pre trained models present in Hugging Face
 
@@ -37,7 +37,7 @@ Model Used - mistralai/Mistral-7B-Instruct-v0.3
 
 MistralAI has around 7 Billion parameters so it is not possible to host or download it locally as it is a very large Model hence we have used the API Method to call and access these models. For Text Generation.
 
-LLMChain: 
+## LLMChain: 
 
 from langchain import PromptTemplate, LLMChain
 
@@ -45,13 +45,13 @@ LLMChain will Wraps an LLM and a prompt template.
 It will help in building logic, memory, and multi-step reasoning.
 from prompt template  we have used LLMChain to create a working flow.
 
-LLM Pipe Line:
+## LLM Pipe Line:
 
 from langchain_huggingface import HuggingFacePipeline
 
 Also created a LLM pipeline by downloading the simple model gpt-2 
 
-# AutoModelForCausallLM will download the model weights and configuration needed for text generation tasks
+AutoModelForCausallLM will download the model weights and configuration needed for text generation tasks
 
 from transformers import AutoModelForCausalLM
 
